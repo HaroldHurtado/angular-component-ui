@@ -1,0 +1,121 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'https://github.com/HaroldHurtado/angular-components-ui',
+1 verbose cli   '--save' ]
+2 info using npm@4.0.1
+3 info using node@v6.9.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData https://github.com/HaroldHurtado/angular-components-ui
+8 silly fetchOtherPackageData https://github.com/HaroldHurtado/angular-components-ui
+9 silly cache add args [ 'https://github.com/HaroldHurtado/angular-components-ui',
+9 silly cache add   null ]
+10 verbose cache add spec https://github.com/HaroldHurtado/angular-components-ui
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'https://github.com/HaroldHurtado/angular-components-ui',
+11 silly cache add   scope: null,
+11 silly cache add   escapedName: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'https://github.com/HaroldHurtado/angular-components-ui',
+11 silly cache add   spec: 'git+https://github.com/HaroldHurtado/angular-components-ui.git',
+11 silly cache add   type: 'hosted',
+11 silly cache add   hosted:
+11 silly cache add    { type: 'github',
+11 silly cache add      ssh: 'git@github.com:HaroldHurtado/angular-components-ui.git',
+11 silly cache add      sshUrl: 'git+ssh://git@github.com/HaroldHurtado/angular-components-ui.git',
+11 silly cache add      httpsUrl: 'git+https://github.com/HaroldHurtado/angular-components-ui.git',
+11 silly cache add      gitUrl: 'git://github.com/HaroldHurtado/angular-components-ui.git',
+11 silly cache add      shortcut: 'github:HaroldHurtado/angular-components-ui',
+11 silly cache add      directUrl: 'https://raw.githubusercontent.com/HaroldHurtado/angular-components-ui/master/package.json' } }
+12 verbose addRemoteGit caching https://github.com/HaroldHurtado/angular-components-ui
+13 verbose addRemoteGit git+https://github.com/HaroldHurtado/angular-components-ui.git is a repository hosted by github
+14 silly tryClone cloning git+https://github.com/HaroldHurtado/angular-components-ui.git via git+https://github.com/HaroldHurtado/angular-components-ui.git
+15 verbose tryClone git-https-github-com-HaroldHurtado-angular-components-ui-git-240fc313 not in flight; caching
+16 verbose correctMkdir /var/root/.npm/_git-remotes correctMkdir not in flight; initializing
+17 info git [ 'config', '--get', 'remote.origin.url' ]
+18 silly validateExistingRemote git+https://github.com/HaroldHurtado/angular-components-ui.git remote.origin.url: https://github.com/HaroldHurtado/angular-components-ui.git
+19 verbose validateExistingRemote git+https://github.com/HaroldHurtado/angular-components-ui.git is updating existing cached remote /var/root/.npm/_git-remotes/git-https-github-com-HaroldHurtado-angular-components-ui-git-240fc313
+20 info git [ 'fetch', '-a', 'origin' ]
+21 verbose updateRemote git fetch -a origin (https://github.com/HaroldHurtado/angular-components-ui.git)
+22 verbose correctMkdir /var/root/.npm/_git-remotes correctMkdir not in flight; initializing
+23 verbose setPermissions git+https://github.com/HaroldHurtado/angular-components-ui.git set permissions on /var/root/.npm/_git-remotes/git-https-github-com-HaroldHurtado-angular-components-ui-git-240fc313
+24 verbose resolveHead git+https://github.com/HaroldHurtado/angular-components-ui.git original treeish: master
+25 info git [ 'rev-list', '-n1', 'master' ]
+26 silly resolveHead git+https://github.com/HaroldHurtado/angular-components-ui.git resolved treeish: 36d5b701889b3beb5dd6986c4b163fd5ddd0a60f
+27 verbose resolveHead git+https://github.com/HaroldHurtado/angular-components-ui.git resolved Git URL: git+https://github.com/HaroldHurtado/angular-components-ui.git#36d5b701889b3beb5dd6986c4b163fd5ddd0a60f
+28 silly resolveHead Git working directory: /tmp/npm-1606-d1e4154d/git-cache-27aff633/36d5b701889b3beb5dd6986c4b163fd5ddd0a60f
+29 info git [ 'clone',
+29 info git   '/var/root/.npm/_git-remotes/git-https-github-com-HaroldHurtado-angular-components-ui-git-240fc313',
+29 info git   '/tmp/npm-1606-d1e4154d/git-cache-27aff633/36d5b701889b3beb5dd6986c4b163fd5ddd0a60f' ]
+30 verbose cloneResolved git+https://github.com/HaroldHurtado/angular-components-ui.git clone Cloning into '/tmp/npm-1606-d1e4154d/git-cache-27aff633/36d5b701889b3beb5dd6986c4b163fd5ddd0a60f'...
+30 verbose cloneResolved done.
+30 verbose cloneResolved Checking out files:  16% (3078/18113)   Checking out files:  17% (3080/18113)   Checking out files:  18% (3261/18113)   Checking out files:  19% (3442/18113)   Checking out files:  20% (3623/18113)   Checking out files:  21% (3804/18113)   Checking out files:  22% (3985/18113)   Checking out files:  23% (4166/18113)   Checking out files:  24% (4348/18113)   Checking out files:  25% (4529/18113)   Checking out files:  26% (4710/18113)   Checking out files:  27% (4891/18113)   Checking out files:  27% (4897/18113)   Checking out files:  28% (5072/18113)   Checking out files:  29% (5253/18113)   Checking out files:  29% (5378/18113)   Checking out files:  30% (5434/18113)   Checking out files:  31% (5616/18113)   Checking out files:  32% (5797/18113)   Checking out files:  33% (5978/18113)   Checking out files:  34% (6159/18113)   Checking out files:  35% (6340/18113)   Checking out files:  36% (6521/18113)   Checking out files:  37% (6702/18113)   Checking out files:  38% (6883/18113)   Checking out files:  39% (7065/18113)   Checking out files:  40% (7246/18113)   Checking out files:  41% (7427/18113)   Checking out files:  42% (7608/18113)   Checking out files:  43% (7789/18113)   Checking out files:  44% (7970/18113)   Checking out files:  45% (8151/18113)   Checking out files:  46% (8332/18113)   Checking out files:  47% (8514/18113)   Checking out files:  48% (8695/18113)   Checking out files:  49% (8876/18113)   Checking out files:  49% (8913/18113)   Checking out files:  50% (9057/18113)   Checking out files:  51% (9238/18113)   Checking out files:  52% (9419/18113)   Checking out files:  53% (9600/18113)   Checking out files:  54% (9782/18113)   Checking out files:  55% (9963/18113)   Checking out files:  56% (10144/18113)   Checking out files:  57% (10325/18113)   Checking out files:  58% (10506/18113)   Checking out files:  59% (10687/18113)   Checking out files:  60% (10868/18113)   Checking out files:  61% (11049/18113)   Checking out files:  62% (11231/18113)   Checking out files:  63% (11412/18113)   Checking out files:  64% (11593/18113)   Checking out files:  65% (11774/18113)   Checking out files:  65% (11823/18113)   Checking out files:  66% (11955/18113)   Checking out files:  67% (12136/18113)   Checking out files:  68% (12317/18113)   Checking out files:  69% (12498/18113)   Checking out files:  70% (12680/18113)   Checking out files:  71% (12861/18113)   Checking out files:  72% (13042/18113)   Checking out files:  73% (13223/18113)   Checking out files:  74% (13404/18113)   Checking out files:  75% (13585/18113)   Checking out files:  76% (13766/18113)   Checking out files:  77% (13948/18113)   Checking out files:  78% (14129/18113)   Checking out files:  79% (14310/18113)   Checking out files:  80% (14491/18113)   Checking out files:  81% (14672/18113)   Checking out files:  81% (14791/18113)   Checking out files:  82% (14853/18113)   Checking out files:  83% (15034/18113)   Checking out files:  84% (15215/18113)   Checking out files:  85% (15397/18113)   Checking out files:  86% (15578/18113)   Checking out files:  87% (15759/18113)   Checking out files:  88% (15940/18113)   Checking out files:  89% (16121/18113)   Checking out files:  90% (16302/18113)   Checking out files:  91% (16483/18113)   Checking out files:  92% (16664/18113)   Checking out files:  93% (16846/18113)   Checking out files:  94% (17027/18113)   Checking out files:  95% (17208/18113)   Checking out files:  96% (17389/18113)   Checking out files:  96% (17473/18113)   Checking out files:  97% (17570/18113)   Checking out files:  98% (17751/18113)   Checking out files:  99% (17932/18113)   Checking out files: 100% (18113/18113)   Checking out files: 100% (18113/18113), done.
+31 info git [ 'checkout', '36d5b701889b3beb5dd6986c4b163fd5ddd0a60f' ]
+32 verbose checkoutTreeish git+https://github.com/HaroldHurtado/angular-components-ui.git checkout Note: checking out '36d5b701889b3beb5dd6986c4b163fd5ddd0a60f'.
+32 verbose checkoutTreeish
+32 verbose checkoutTreeish You are in 'detached HEAD' state. You can look around, make experimental
+32 verbose checkoutTreeish changes and commit them, and you can discard any commits you make in this
+32 verbose checkoutTreeish state without impacting any branches by performing another checkout.
+32 verbose checkoutTreeish
+32 verbose checkoutTreeish If you want to create a new branch to retain commits you create, you may
+32 verbose checkoutTreeish do so (now or later) by using -b with the checkout command again. Example:
+32 verbose checkoutTreeish
+32 verbose checkoutTreeish   git checkout -b <new-branch-name>
+32 verbose checkoutTreeish
+32 verbose checkoutTreeish HEAD is now at 36d5b70... Run command webpack --progress and create file tsconfig.json
+33 info git [ 'submodule', '-q', 'update', '--init', '--recursive' ]
+34 verbose updateSubmodules git+https://github.com/HaroldHurtado/angular-components-ui.git submodule update
+35 verbose addLocalDirectory /var/root/.npm/angular-components-ui/0.0.0/package.tgz not in flight; packing
+36 verbose correctMkdir /var/root/.npm correctMkdir not in flight; initializing
+37 verbose tar pack [ '/var/root/.npm/angular-components-ui/0.0.0/package.tgz',
+37 verbose tar pack   '/tmp/npm-1606-d1e4154d/git-cache-27aff633/36d5b701889b3beb5dd6986c4b163fd5ddd0a60f' ]
+38 verbose tarball /var/root/.npm/angular-components-ui/0.0.0/package.tgz
+39 verbose folder /tmp/npm-1606-d1e4154d/git-cache-27aff633/36d5b701889b3beb5dd6986c4b163fd5ddd0a60f
+40 verbose addLocalTarball adding from inside cache /var/root/.npm/angular-components-ui/0.0.0/package.tgz
+41 verbose correctMkdir /var/root/.npm correctMkdir not in flight; initializing
+42 verbose addRemoteGit data._from: git+https://github.com/HaroldHurtado/angular-components-ui.git
+43 verbose addRemoteGit data._resolved: git+https://github.com/HaroldHurtado/angular-components-ui.git#36d5b701889b3beb5dd6986c4b163fd5ddd0a60f
+44 silly cache afterAdd angular-components-ui@0.0.0
+45 verbose afterAdd /var/root/.npm/angular-components-ui/0.0.0/package/package.json not in flight; writing
+46 verbose correctMkdir /var/root/.npm correctMkdir not in flight; initializing
+47 verbose afterAdd /var/root/.npm/angular-components-ui/0.0.0/package/package.json written
+48 silly install normalizeTree
+49 silly loadCurrentTree Finishing
+50 silly loadIdealTree Starting
+51 silly install loadIdealTree
+52 silly cloneCurrentTree Starting
+53 silly install cloneCurrentTreeToIdealTree
+54 silly cloneCurrentTree Finishing
+55 silly loadShrinkwrap Starting
+56 silly install loadShrinkwrap
+57 silly loadShrinkwrap Finishing
+58 silly loadAllDepsIntoIdealTree Starting
+59 silly install loadAllDepsIntoIdealTree
+60 silly rollbackFailedOptional Starting
+61 silly rollbackFailedOptional Finishing
+62 silly runTopLevelLifecycles Finishing
+63 silly install printInstalled
+64 verbose stack Error: Refusing to install angular-components-ui as a dependency of itself
+64 verbose stack     at checkSelf (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:53:14)
+64 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+64 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+64 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+64 verbose stack     at /usr/local/lib/node_modules/npm/lib/install/validate-args.js:16:5
+64 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:35
+64 verbose stack     at Array.forEach (native)
+64 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:52:11
+64 verbose stack     at Array.forEach (native)
+64 verbose stack     at asyncMap (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:51:8)
+65 verbose cwd /Users/haroldhurtado/Documents/Projects/angular-components-ui
+66 error Darwin 15.4.0
+67 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "https://github.com/HaroldHurtado/angular-components-ui" "--save"
+68 error node v6.9.1
+69 error npm  v4.0.1
+70 error code ENOSELF
+71 error Refusing to install angular-components-ui as a dependency of itself
+72 error If you need help, you may report this error at:
+72 error     <https://github.com/npm/npm/issues>
+73 verbose exit [ 1, true ]
