@@ -10190,6 +10190,7 @@
 	(0, _core.NgModule)({
 	  declarations: [_appComponent.AppComponent, _inputComponent.InputComponent],
 	  imports: [_platformBrowser.BrowserModule, _forms.FormsModule, _http.HttpModule],
+	  exports: [_inputComponent.InputComponent],
 	  providers: [],
 	  bootstrap: [_inputComponent.InputComponent]
 	});
