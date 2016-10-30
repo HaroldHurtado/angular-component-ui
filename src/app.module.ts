@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './components/app.component';
-import { InputComponent } from './components/input.component';
+import { AppComponent } from './components/app.component.ts';
+import { InputComponent } from './components/input.component.ts';
 
 NgModule({
   declarations: [
