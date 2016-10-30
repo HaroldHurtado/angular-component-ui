@@ -1,6 +1,7 @@
 {
   "name": "angular-components-ui",
   "version": "0.0.0",
+  "main": "index.ts",
   "scripts": {
     "start": "npm run lite",
     "lite": "lite-server"

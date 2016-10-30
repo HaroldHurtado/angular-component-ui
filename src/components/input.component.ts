@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 Component({
   selector: 'input-component',
-  template:`<div>{{title}}  </div>`
+  template:`<div><label>Hi I am ImputComponent</label> </div>`
 })
 
 export class InputComponent {
