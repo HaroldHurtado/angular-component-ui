@@ -16,6 +16,7 @@ NgModule({
     FormsModule,
     HttpModule
   ],
+  exports: [InputComponent],
   providers: [],
   bootstrap: [InputComponent]
 })
