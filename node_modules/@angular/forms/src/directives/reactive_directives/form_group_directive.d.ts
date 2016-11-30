@@ -10,50 +10,89 @@ import { EventEmitter } from '../../facade/async';
 import { FormArray, FormControl, FormGroup } from '../../model';
 import { ControlContainer } from '../control_container';
 import { Form } from '../form_interface';
-import { FormControlName } from './form_control_name';
-import { FormArrayName, FormGroupName } from './form_group_name';
+import { NgControl } from '../ng_control';
+import { FormArrayName } from './form_array_name';
+import { FormGroupName } from './form_group_name';
 export declare const formDirectiveProvider: any;
 /**
- * @whatItDoes Binds an existing {@link FormGroup} to a DOM element.
+ * Binds an existing form group to a DOM element.
  *
- * @howToUse
+ * ### Example ([live demo](http://plnkr.co/edit/jqrVirudY8anJxTMUjTP?p=preview))
  *
- * This directive accepts an existing {@link FormGroup} instance. It will then use this
- * {@link FormGroup} instance to match any child {@link FormControl}, {@link FormGroup},
- * and {@link FormArray} instances to child {@link FormControlName}, {@link FormGroupName},
- * and {@link FormArrayName} directives.
+ * In this example, we bind the form group to the form element, and we bind the login and
+ * password controls to the login and password elements.
  *
- * **Set value**: You can set the form's initial value when instantiating the
- * {@link FormGroup}, or you can set it programmatically later using the {@link FormGroup}'s
- * {@link AbstractControl.setValue} or {@link AbstractControl.patchValue} methods.
+ *  ```typescript
+ * @Component({
+ *   selector: 'my-app',
+ *   template: `
+ *     <div>
+ *       <h2>Binding an existing form group</h2>
+ *       <form [formGroup]="loginForm">
+ *         <p>Login: <input type="text" formControlName="login"></p>
+ *         <p>Password: <input type="password" formControlName="password"></p>
+ *       </form>
+ *       <p>Value:</p>
+ *       <pre>{{value}}</pre>
+ *     </div>
+ *   `,
+ *   directives: [REACTIVE_FORM_DIRECTIVES]
+ * })
+ * export class App {
+ *   loginForm: FormGroup;
  *
- * **Listen to value**: If you want to listen to changes in the value of the form, you can subscribe
- * to the {@link FormGroup}'s {@link AbstractControl.valueChanges} event.  You can also listen to
- * its {@link AbstractControl.statusChanges} event to be notified when the validation status is
- * re-calculated.
+ *   constructor() {
+ *     this.loginForm = new FormGroup({
+ *       login: new FormControl(""),
+ *       password: new FormControl("")
+ *     });
+ *   }
  *
- * Furthermore, you can listen to the directive's `ngSubmit` event to be notified when the user has
- * triggered a form submission. The `ngSubmit` event will be emitted with the original form
- * submission event.
+ *   get value(): string {
+ *     return JSON.stringify(this.loginForm.value, null, 2);
+ *   }
+ * }
+ *  ```
  *
- * ### Example
+ * We can also use ngModel to bind a domain model to the form.
  *
- * In this example, we create form controls for first name and last name.
+ *  ```typescript
+ * @Component({
+ *      selector: "login-comp",
+ *      directives: [REACTIVE_FORM_DIRECTIVES],
+ *      template: `
+ *        <form [formGroup]='loginForm'>
+ *          Login <input type='text' formControlName='login' [(ngModel)]='credentials.login'>
+ *          Password <input type='password' formControlName='password'
+ *                          [(ngModel)]='credentials.password'>
+ *          <button (click)="onLogin()">Login</button>
+ *        </form>`
+ *      })
+ * class LoginComp {
+ *  credentials: {login: string, password: string};
+ *  loginForm: FormGroup;
  *
- * {@example forms/ts/simpleFormGroup/simple_form_group_example.ts region='Component'}
+ *  constructor() {
+ *    this.loginForm = new FormGroup({
+ *      login: new FormControl(""),
+ *      password: new FormControl("")
+ *    });
+ *  }
  *
- * **npm package**: `@angular/forms`
+ *  onLogin(): void {
+ *    // this.credentials.login === 'some login'
+ *    // this.credentials.password === 'some password'
+ *  }
+ * }
+ *  ```
  *
- * **NgModule**: {@link ReactiveFormsModule}
- *
- *  @stable
+ *  @experimental
  */
 export declare class FormGroupDirective extends ControlContainer implements Form, OnChanges {
     private _validators;
     private _asyncValidators;
     private _submitted;
-    private _oldForm;
-    directives: FormControlName[];
+    directives: NgControl[];
     form: FormGroup;
     ngSubmit: EventEmitter<{}>;
     constructor(_validators: any[], _asyncValidators: any[]);
@@ -62,20 +101,16 @@ export declare class FormGroupDirective extends ControlContainer implements Form
     formDirective: Form;
     control: FormGroup;
     path: string[];
-    addControl(dir: FormControlName): FormControl;
-    getControl(dir: FormControlName): FormControl;
-    removeControl(dir: FormControlName): void;
+    addControl(dir: NgControl): void;
+    getControl(dir: NgControl): FormControl;
+    removeControl(dir: NgControl): void;
     addFormGroup(dir: FormGroupName): void;
     removeFormGroup(dir: FormGroupName): void;
     getFormGroup(dir: FormGroupName): FormGroup;
     addFormArray(dir: FormArrayName): void;
     removeFormArray(dir: FormArrayName): void;
     getFormArray(dir: FormArrayName): FormArray;
-    updateModel(dir: FormControlName, value: any): void;
-    onSubmit($event: Event): boolean;
-    onReset(): void;
-    resetForm(value?: any): void;
-    private _updateRegistrations();
-    private _updateValidators();
+    updateModel(dir: NgControl, value: any): void;
+    onSubmit(): boolean;
     private _checkFormPresent();
 }

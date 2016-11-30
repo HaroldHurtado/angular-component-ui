@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Angular 2 QuickStart</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular2 Custom Component</title>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
 
-</head>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="node_modules/rxjs/bundles/RX.js"></script>
 
-<body>
-    <h3>Hi I am Body index</h3>
-    <script type="text/javascript" src="dist/library.js"></script>
-</body>
+    <script src="system.config.js"></script>
+    <script>
+      System.import('built/hello-angular.js').then(null,console.error.bind(console));
+    </script>
+  </head>
+  <body>
+      <hello-angular></hello-angular>
+  </body>
 </html>
